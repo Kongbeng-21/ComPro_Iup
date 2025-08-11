@@ -46,21 +46,39 @@ def display_location(player_location):
     # Show items in room
     if current_room['items']:
         print(f"You can see: {', '.join(current_room['items'])}")
-   
-# Morning task
+def show_items_here(game_state):
+    room=rooms[game_state[0]]
+    items=room['items']
+    if items:
+           print("\nYou can see:", ", ".join(items))
+    else:
+        print("\nYou see nothinf here")
+# Morning task (I add )
 def move_player(direction, game_state):
-    # game_state = [player_location, player_health, player_score, player_inventory, game_quit]
-   
-    # To be implemented
+    direction=direction.lower().strip()
+    loc=game_state[0]
+    exits=rooms[loc]['exits']
+    if direction in exits:
+        new_loc=exits[direction]
+        game_state[0]=new_loc
+        display_location(new_loc)
+    else:
+        print('\nYou cant go that way')
     pass
 
 
 # Morning task
 def take_item(item_name, game_state):
-    # game_state = [player_location, player_health, player_score, player_inventory, game_quit]
-
-
-    # To be implemented
+    name=item_name.strip().lower().replace(" ","_")
+    loc=game_state[0]
+    room=rooms[loc]
+    items_here=room['items']
+    if name in items_here:
+        items_here.remove(name)
+        game_state[3].append(name)
+        print(f"\nYou take the {name}.")
+    else:
+        print("\nThat item is not here.")
     pass
 
 
@@ -120,7 +138,8 @@ def process_command(command, game_state):
     if action == 'go' and len(parts) > 1:
         move_player(parts[1], game_state)
     elif action == 'take' and len(parts) > 1:
-        take_item(parts[1], game_state)
+        item_name=" ".join(parts[1:])
+        take_item(item_name, game_state)
     elif action == 'use' and len(parts) > 1:
         print("To be implemented")
     elif action == 'inventory':
