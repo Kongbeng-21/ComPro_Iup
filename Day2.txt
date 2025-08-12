@@ -1,0 +1,58 @@
+#my answer is after ->
+A. [Required] Description of your Project 2 extension (what you added or changed).
+#->I added  move player, take items,show items,show inventory,display stats and change a little bit of process command to fit together with my code.
+B. [Required] Game instructions, such as:
+               - How game is played.
+                #-> play like base on code but i add the function that player can move to the place that they set,can pick the items,can show the items that player pick and stats that player has,
+                - Map and list of items in locations
+               - Winning condition(s)
+C. [Required] 2-3 example playthroughs showing how game is played and outputs
+                #->
+============================================================
+         WELCOME TO THE ADVENTURE GAME!
+============================================================
+
+Your goal is to explore the world and find the treasure!
+Type 'help' at any time to see available commands.
+
+==================================================
+LOCATION: FOREST
+==================================================
+You are in a dark, mysterious forest. Tall trees surround you.
+
+Exits: north, east, south
+You can see: stick, berries
+
+> What do you want to do? go south
+
+==================================================
+LOCATION: LAKE
+==================================================
+A serene lake with crystal-clear water. Fish swim peacefully below.
+
+Exits: north
+You can see: fishing_rod, fish
+
+> What do you want to do? take fish
+
+You take the fish.
+
+> What do you want to do? go north
+
+==================================================
+LOCATION: FOREST
+==================================================
+You are in a dark, mysterious forest. Tall trees surround you.
+
+Exits: north, east, south
+You can see: stick, berries
+
+> What do you want to do? stats
+
+ ===START=== 
+Location : forest)
+Health : 100
+Score : 0
+
+D. [Optional] Additional information:
+               #-> i didnt do it alot but i did function that understand
