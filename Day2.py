@@ -27,12 +27,6 @@ rooms = {
         'description': 'A serene lake with crystal-clear water. Fish swim peacefully below.',
         'exits': {'north': 'forest'},
         'items': ['fishing_rod', 'fish']
-    'kkkkkkkkkkk': {
-        'description': 'A room in my house'
-        'exits': {'bed': 'computer' : 'lamp'},
-        'items': ['tissue', 'ipad']
-        }
-        
     }
 }
 
@@ -52,6 +46,8 @@ def display_location(player_location):
     # Show items in room
     if current_room['items']:
         print(f"You can see: {', '.join(current_room['items'])}")
+        
+#  (i added)      
 def show_items_here(game_state):
     room=rooms[game_state[0]]
     items=room['items']
@@ -59,9 +55,9 @@ def show_items_here(game_state):
            print("\nYou can see:", ", ".join(items))
     else:
         print("\nYou see nothinf here")
-# Morning task (I add )
+        
+# Morning task (I added )
 def move_player(direction, game_state):
-<<<<<<< HEAD
     direction=direction.lower().strip()
     loc=game_state[0]
     exits=rooms[loc]['exits']
@@ -71,15 +67,10 @@ def move_player(direction, game_state):
         display_location(new_loc)
     else:
         print('\nYou cant go that way')
-=======
-    # game_state = [player_location, player_health, player_score, player_inventory, game_quit]
-   if player_location
-    # To be implemented
->>>>>>> 6b8638a (update)
     pass
 
 
-# Morning task
+# Morning task (i added)
 def take_item(item_name, game_state):
     name=item_name.strip().lower().replace(" ","_")
     loc=game_state[0]
@@ -94,20 +85,26 @@ def take_item(item_name, game_state):
     pass
 
 
-# Morning task
+# 
 def check_win_condition(game_state):
     # Check if player has collected the treasure
     # To be implemented
     pass
 
-
+#i add
 def display_stats(game_state):
-    # To be implemented
+    print("\n ===START=== ")
+    print(f"Location : {game_state[0]})")
+    print(f"Health : {game_state[1]}")
+    print(f"Score : {game_state[2]}")
     pass
 
-
+# (i added)
 def show_inventory(game_state):
-    # To be implemented
+    inv=game_state[3]
+    print("\n=== INVENTORY ===")
+    print(", ",join(inv) if inv else "(empty)")
+    
     pass
 
 
@@ -155,11 +152,11 @@ def process_command(command, game_state):
     elif action == 'use' and len(parts) > 1:
         print("To be implemented")
     elif action == 'inventory':
-        print("To be implemented")
+        show_inventory(game_state)
     elif action == 'look':
         display_location(game_state[0])
     elif action == 'stats':
-        print("To be implemented")
+        display_stats(game_state)
     elif action == 'help':
         show_help()
     elif action == 'quit':
