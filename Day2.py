@@ -27,6 +27,12 @@ rooms = {
         'description': 'A serene lake with crystal-clear water. Fish swim peacefully below.',
         'exits': {'north': 'forest'},
         'items': ['fishing_rod', 'fish']
+    'kkkkkkkkkkk': {
+        'description': 'A room in my house'
+        'exits': {'bed': 'computer' : 'lamp'},
+        'items': ['tissue', 'ipad']
+        }
+        
     }
 }
 
@@ -55,6 +61,7 @@ def show_items_here(game_state):
         print("\nYou see nothinf here")
 # Morning task (I add )
 def move_player(direction, game_state):
+<<<<<<< HEAD
     direction=direction.lower().strip()
     loc=game_state[0]
     exits=rooms[loc]['exits']
@@ -64,6 +71,11 @@ def move_player(direction, game_state):
         display_location(new_loc)
     else:
         print('\nYou cant go that way')
+=======
+    # game_state = [player_location, player_health, player_score, player_inventory, game_quit]
+   if player_location
+    # To be implemented
+>>>>>>> 6b8638a (update)
     pass
 
 
