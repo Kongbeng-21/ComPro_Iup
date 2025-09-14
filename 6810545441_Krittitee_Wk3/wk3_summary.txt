@@ -1,0 +1,27 @@
+1.ask_personal_info()
+Input of name, gender, age, weight, height, exercise.
+Change  Name to be a capital in first letter and Gender have to be a Capital too, Exercise change to be normal letter.
+
+2.compute_bmr()
+Compute from user input and using Harris-Benedict that given from doc.
+
+3.compute_tdee
+Compute by multiplies by factors and upper by math.ceil.
+
+4.acquire_meal_summary
+Summary the cal of food that input to be a meal_cal and illustrate.
+
+5.compute_excess_calories
+Return different by consumed substration by needed.
+
+6.compute_exercise_duration
+Convert excess to minutes that have to exercise.
+
+7.acquire_exercise_summary
+Illustrate the info that compute from other function.
+
+8.display_summary
+Show exercise level and calculate excess from total_cal_sum compare tdee then summary by acquire_exercise_summary.
+
+9.Main part
+Show text and call function that compute the input and Illustrate all of computed info.
