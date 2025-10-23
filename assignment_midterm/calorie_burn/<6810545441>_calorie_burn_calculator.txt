@@ -1,0 +1,30 @@
+Summary of Works 
+-It builds a command-line calorie tracker.
+-The user creates a profile (name, gender, age, weight, height, activity level). From that I compute BMR and TDEE and save tdee_goal.
+-Then it shows a looping main menu with 6 options exactly as required (Add Meals, Add Exercise, Remove an Entry, Show Summary for a Day, Show Full History, Exit).
+-I log all data in a simple in-memory dict called history = { date: {"meals":[...], "exercises":[...]} }.
+
+-cal_BMR(): computes Basal Metabolic Rate using the given formulas (male/female).
+
+-cal_TDEE(BMR, act_lev): multiplies BMR by the correct activity factor to get TDEE.
+
+-list_options(options_dict): turns a dictionary’s keys into a list (I currently sort them).
+
+-choose_from_list(title, items, cols=5, col_w=22): shows a numbered grid (1…N) and safely reads a number, returning the chosen name.
+
+-get_or_create_day(date_str): ensures history[date_str] exists with {"meals": [], "exercises": []}.
+
+-add_meals(): asks for a date and number of meals, then for each meal lets the user pick entree + dessert + drink. It looks up calories from FOOD_DATA, sums them, and appends one dict per meal to history[date]["meals"].
+
+-add_exercise(): asks for a date, exercise name, and minutes. It uses per-hour burn from EXERCISE_DATA, converts to minutes, and appends one dict to history[date]["exercises"].
+
+-remove_entry(): for a chosen day, lets the user remove either one meal or one exercise by its list number.
+
+-print_daily_table(): helper that prints a neat box-table for the daily summary.
+
+-show_summary_of_the_day(): computes consumed, burned, and net = consumed − burned − TDEE for a given date, and prints the daily table.
+
+-show_full_history(): prints each logged day’s totals and then an Overall Summary (days, averages, totals, and net).
+
+Known issues 
+-The numbered list on screen doesn’t match the original order in the data, but when I pick a number the calories are still correct.

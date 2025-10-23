@@ -1,0 +1,34 @@
+Summary of Works 
+- ask_board_size
+prompt with validation (3–10), re-prompts until valid.
+
+- ask_symbol single
+ alphabetical char; Player 2 must differ from Player 1.
+
+- create_board
+ 2D list of strings with numbered empty cells.
+
+- display_board
+ clear grid printed BEFORE each turn; empty cells show their position number.
+
+-  ask_move
+Move input validation: numeric, within 1..n^2, and cell must be free; re-prompts on error.
+
+- check_for_winner
+ full row, full column, main diagonal, or anti-diagonal.
+
+- is_board_full
+ board full with no winner.
+
+- function main 
+alternates between Player 1 and Player 2.
+prints final board and a clear message (“Player X wins!” or “It’s a draw!”).
+
+
+Partially Complete 
+- None observed in manual tests. Prompts/messages are concise; adjust wording if your autograder expects exact strings.
+- Scope intentionally excludes AI opponent and GUI (not required by spec).
+
+Quick Manual Tests 
+- n=3; P1='X', P2='O'; moves: 1,2,4,5,7 ⇒ Player 'X' wins (first column).
+- Fill board without a winning line ⇒ “It’s a draw!” shown with final board.
