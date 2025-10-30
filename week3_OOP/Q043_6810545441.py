@@ -1,5 +1,5 @@
 # Name: Krittitee Chaisang #  Student ID: 6810545441
-name = input("Enter account owner: ").split()
+name = input("Enter account owner: ")
 balance = input("Enter initial balance: ")
 print(f"Welcome, {name}.")
 class BankAccount:
@@ -41,4 +41,4 @@ while True:
     elif action == 'balance' and val == None:
         print(acc.get_balance())
     else:
-        print
+        print()
