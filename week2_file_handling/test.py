@@ -6,6 +6,7 @@ with open("scores.txt",'r')as f:
 
 topnm,topsc = max(data,key=lambda s: s[1])
  
-    
+avg = sum(i for i,j in data) / len (data)
+      
 print(topnm,topsc)
 

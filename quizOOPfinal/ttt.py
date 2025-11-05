@@ -1,5 +1,5 @@
 x = input()
 try :
-    x
+    x == 
 except ValueError:
     print('ssss')

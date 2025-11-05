@@ -1,3 +1,4 @@
+# Name: Krittitee Chaisang #  Student ID: 6810545441
 from pathlib import Path
 path = Path("journal.log")
 while True:

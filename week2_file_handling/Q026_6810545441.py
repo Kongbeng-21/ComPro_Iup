@@ -1,5 +1,4 @@
 # Name: Krittitee Chaisang #  Student ID: 6810545441
-# Name: Krittitee Chaisang  # Student ID: 6810545441
 import csv
 from pathlib import Path
 

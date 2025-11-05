@@ -30,9 +30,17 @@ while True:
             print(shape.get_info())
         else:
             print('No shapes recorded')
+        try :
+            if shape_type not in shpe
+        except :
+            print('Invalid shape type')
         break
     shape_list.append(shape_type)
     size = float(input('Enter size: '))
+    try:
+        if
+    except:
+        print(f'Name already exists: {}')
     shape_list.append(size)
     name = input('Enter name: ')
     shape_list.append(name)
